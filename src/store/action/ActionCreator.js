@@ -1,7 +1,8 @@
-// actions.js
+import { ADD_TODO, DELETE_TODO, TOGGLE_TODO, CLEAR_COMPLETED, SET_FILTER } from "./ActionTypes";
+
 export const addTodo = (text) => {
     return {
-      type: 'ADD_TODO',
+      type: ADD_TODO,
       payload: {
         id: new Date().getTime(),
         text,
@@ -12,27 +13,27 @@ export const addTodo = (text) => {
   
   export const deleteTodo = (id) => {
     return {
-      type: 'DELETE_TODO',
+      type: DELETE_TODO,
       payload: id,
     };
   };
   
   export const toggleTodo = (id) => {
     return {
-      type: 'TOGGLE_TODO',
+      type: TOGGLE_TODO,
       payload: id,
     };
   };
   
   export const clearCompleted = () => {
     return {
-      type: 'CLEAR_COMPLETED',
+      type: CLEAR_COMPLETED,
     };
   };
   
   export const setFilter = (filter) => {
     return {
-      type: 'SET_FILTER',
+      type: SET_FILTER,
       payload: filter,
     };
   };
